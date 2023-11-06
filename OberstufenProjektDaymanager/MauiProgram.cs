@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using DevExpress.Maui;
+using Microsoft.Extensions.Logging;
 
 namespace OberstufenProjektDaymanager
 {
@@ -9,6 +10,7 @@ namespace OberstufenProjektDaymanager
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseDevExpress()
                 .ConfigureFonts(fonts =>
                 {
                     //Test
