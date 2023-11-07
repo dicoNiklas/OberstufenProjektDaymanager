@@ -1,11 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
              xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
              xmlns:local="clr-namesapce:OberstufenProjektDaymanager.MainPage"
              x:Class="OberstufenProjektDaymanager.MainPage">
 
+    <controls:TabView>
+        <controls:TabView.Items>
+            <!-- Kalendar -->
+            <controls:TabViewItem HeaderText="Kalendar"
+                                  HeaderFontAttributes="Italic"
+                                  HeaderFontSize="15">
+                <dxe:DXCalendar MaxDate="2099-12-31" 
+                                SelectedDate="2023-07-11" 
+                                BackgroundColor="WhiteSmoke">
+                    <!-- Header personalisieren-->
+                    <dxe:DXCalendar.HeaderAppearance>
+                        <dxe:CalendarHeaderAppearance BackgroundColor="Grey"/>
+                    </dxe:DXCalendar.HeaderAppearance>
+                    <dxe:DXCalendar.DayCellAppearance>
+                        <dxe:CalendarDayCellAppearance FontAttributes="Italic"
+                                                       TextColor="Black"/>
+                    </dxe:DXCalendar.DayCellAppearance>
+                    <dxe:DXCalendar.DayOfWeekCellAppearance>
+                        <dxe:CalendarDayOfWeekCellAppearance FontAttributes="Bold"
+                                                             TextColor="Black"/>
+                    </dxe:DXCalendar.DayOfWeekCellAppearance>
+                </dxe:DXCalendar>
+                
+            </controls:TabViewItem >
+            
+            <!-- Todos -->
+            <controls:TabViewItem HeaderText="Todos"
+                                  HeaderFontAttributes="Italic"
+                                  HeaderFontSize="15">
+                
+            </controls:TabViewItem>
+            
+            <!-- Einstellungen -->
+            <controls:TabViewItem HeaderText="Einstellungen"
+                                  HeaderFontAttributes="Italic"
+                                  HeaderFontSize="15" >
 
-    <dxe:DXCalendar MaxDate="2099-12-31" SelectedDate="2023-11-06"/>
-
+            </controls:TabViewItem>
+        </controls:TabView.Items>
+    </controls:TabView>
 </ContentPage>

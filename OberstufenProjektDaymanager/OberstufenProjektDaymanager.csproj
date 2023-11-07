@@ -55,9 +55,6 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
-	  <PackageReference Include="DevExpress.Maui.Controls">
-	    <Version>23.1.6</Version>
-	  </PackageReference>
 	  <PackageReference Include="DevExpress.Maui.Editors">
 	    <Version>23.1.6</Version>
 	  </PackageReference>
@@ -65,9 +62,6 @@
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
 	  <PackageReference Include="DevExpress.Maui.Controls">
-	    <Version>23.1.6</Version>
-	  </PackageReference>
-	  <PackageReference Include="DevExpress.Maui.Editors">
 	    <Version>23.1.6</Version>
 	  </PackageReference>
 	</ItemGroup>
